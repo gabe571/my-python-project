@@ -13,10 +13,13 @@ def days_to_units(num_of_days):
         return ('you entered a negative number, please enter a positive number')
 
 user_input = input('enter a number of days\n')
-user_input_number = int(user_input)
 
-cal_value = days_to_units(user_input_number)
-print(cal_value)
+if user_input.isdigit():
+    user_input_number = int(user_input)
+    cal_value = days_to_units(user_input_number)
+    print(cal_value)
+else:
+    print('not a valid number, please try again')
 #   print(custom_message)
 
 
