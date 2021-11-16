@@ -5,13 +5,16 @@ name_of_unit = 'seconds'
 
 
 def days_to_units(num_of_days):
-    return (f'{num_of_days} days are {num_of_days * calculation_to_units}  {name_of_unit}')
-
+    if num_of_days > 0:
+        return (f'{num_of_days} days are {num_of_days * calculation_to_units}  {name_of_unit}')
+    elif num_of_days == 0:
+        return('you entered, please enter a valid positive number')
+    else:
+        return (f'not a valid entry')
 user_input = input('enter a number of days\n')
 user_input_number = int(user_input)
 cal_value = days_to_units(user_input_number)
 print(cal_value)
-
 #   print(custom_message)
 
 
