@@ -18,7 +18,8 @@ def validate_and_execute():
     else:
         print('not a valid number, please try again')
 
-while True:
+user_input = ''
+while user_input != 'exit':
     user_input = input('enter a number of days\n')
     validate_and_execute()
 
